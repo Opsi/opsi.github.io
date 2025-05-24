@@ -1,0 +1,25 @@
+---
+import profileImage from "../assets/profile.png";
+---
+
+<section>
+    <div class="flex flex-col">
+        <h1 class="text-2xl text-bold">Robin is a fullstack developer based in Berlin, Germany.</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+    <img
+        class="m-4 neo-brutalist-shadow border-black border-2 rounded-lg max-w-96"
+        src={profileImage.src}
+        alt="Profile Picture"
+    />
+    <a href="/"> Contact me </a>
+</section>
+
+<style>
+    .neo-brutalist-shadow {
+        box-shadow: 8px 12px #000;
+    }
+</style>
