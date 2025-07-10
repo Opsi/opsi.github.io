@@ -1,10 +1,10 @@
 ---
-import githubSVG from "../assets/github-142-svgrepo-com.svg";
-import linkedinSVG from "../assets/linkedin-svgrepo-com.svg";
+import GithubLogo from "../assets/github-svgrepo-com.svg";
+import LinkedinLogo from "../assets/linkedin-svgrepo-com.svg";
 ---
 
 <section
-  class="relative h-screen w-screen bg-slate-700 flex flex-col items-start justify-center p-4"
+  class="relative h-screen w-screen flex flex-col items-start justify-center p-4"
 >
   <div class="max-w-3xl mx-auto space-y-8">
     <div class="container mx-auto max-w-3xl">
@@ -12,33 +12,36 @@ import linkedinSVG from "../assets/linkedin-svgrepo-com.svg";
         <div class="flex items-center gap-2">
           <code
             id="typewriter"
-            class="text-2xl text-left h-6 flex text-pink-400 items-center"
+            class="text-2xl text-left h-6 flex text-primary font-semibold items-center"
           >
           </code>
-          <span
-            id="cursor"
-            class="inline-block w-1.5 h-6 animate-pulse bg-white"></span>
+          <span id="cursor" class="inline-block w-1.5 h-6 animate-pulse bg-ink"
+          ></span>
         </div>
         <h1 class="text-6xl font-extrabold">Robin Wiersig</h1>
-        <p class="text-4xl italic font-medium">
+        <p class="text-3xl text-whisper font-medium">
           Fullstack Developer based in Berlin. I love to make things more
           efficient one bug at a time
         </p>
       </div>
     </div>
-    <div class="flex items-start gap-4">
+    <div class="flex items-center justify-start gap-4">
       <a href="https://github.com/opsi">
-        <img class="size-8" src={githubSVG.src} />
+        <GithubLogo
+          class="size-10 fill-whisper hover:fill-primary hover:scale-120 transition duration-150 ease-in-out"
+        />
       </a>
       <a href="https://www.linkedin.com/in/robin-wiersig-396527195">
-        <img class="size-8" src={linkedinSVG.src} />
+        <LinkedinLogo
+          class="size-12 fill-whisper hover:fill-primary hover:scale-120 transition duration-150 ease-in-out"
+        />
       </a>
     </div>
   </div>
 </section>
-<section class="h-40 bg-green-300"></section>
 
 <script>
+  // TODO: Extract this logic into a component
   const START_BACKSPACE_DELAY = 1000;
   const TYPE_DELAY = 50;
   const NEXT_TEXT_DELAY = 1000;
