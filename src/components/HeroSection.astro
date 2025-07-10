@@ -1,49 +1,59 @@
 ---
-import profileImage from "../assets/profile.png";
+import githubSVG from "../assets/github-142-svgrepo-com.svg";
+import linkedinSVG from "../assets/linkedin-svgrepo-com.svg";
 ---
 
 <section
-  class="relative h-screen w-screen bg-slate-700 flex flex-col items-center justify-center"
+  class="relative h-screen w-screen bg-slate-700 flex flex-col items-start justify-center p-4"
 >
-  <div class="container mx-auto px-4 max-w-3xl">
-    <div class="flex flex-col items-start">
-      <div class="flex items-center gap-2">
-        <code
-          id="typewriter"
-          class="text-2xl text-left h-6 flex text-pink-400 items-center"
-        >
-        </code>
-        <span id="cursor" class="inline-block w-1.5 h-6 animate-pulse bg-white"
-        ></span>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <div class="container mx-auto max-w-3xl">
+      <div class="flex flex-col items-start gap-2">
+        <div class="flex items-center gap-2">
+          <code
+            id="typewriter"
+            class="text-2xl text-left h-6 flex text-pink-400 items-center"
+          >
+          </code>
+          <span
+            id="cursor"
+            class="inline-block w-1.5 h-6 animate-pulse bg-white"></span>
+        </div>
+        <h1 class="text-6xl font-extrabold">Robin Wiersig</h1>
+        <p class="text-4xl italic font-medium">
+          Fullstack Developer based in Berlin. I love to make things more
+          efficient one bug at a time
+        </p>
       </div>
-      <h1 class="text-6xl text-bold">Robin Wiersig</h1>
-      <p class="">
-        Fullstack Developer based in Berlin. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
-      </p>
     </div>
-    <img
-      class="m-4 neo-brutalist-shadow border-black border-2 rounded-lg max-w-96"
-      src={profileImage.src}
-      alt="Profile Picture"
-    />
-    <a href="/"> Contact me </a>
+    <div class="flex items-start gap-4">
+      <a href="https://github.com/opsi">
+        <img class="size-8" src={githubSVG.src} />
+      </a>
+      <a href="https://www.linkedin.com/in/robin-wiersig-396527195">
+        <img class="size-8" src={linkedinSVG.src} />
+      </a>
+    </div>
   </div>
 </section>
 <section class="h-40 bg-green-300"></section>
 
-<script type="module">
+<script>
   const START_BACKSPACE_DELAY = 1000;
-  const TYPE_DELAY = 100;
-  const NEXT_TEXT_DELAY = 2000;
+  const TYPE_DELAY = 50;
+  const NEXT_TEXT_DELAY = 1000;
 
-  const texts = ["WEB DEVELOPER", "LINUX ENTHUSIAST"];
+  const texts = [
+    "FULLSTACK DEVELOPER",
+    "TYPESCRIPT ENJOYER",
+    "LINUX ENTHUSIAST",
+  ];
   const typewriter = document.getElementById("typewriter");
   let textIndex = 0;
   let charIndex = 0;
   let isBackspacing = false;
   function typeWrite() {
+    if (!typewriter) return;
     if (isBackspacing && charIndex <= 1) {
       // rotate to the next text
       typewriter.innerHTML = "";
