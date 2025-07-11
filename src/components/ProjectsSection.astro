@@ -1,27 +1,37 @@
 ---
-import profilePic from "../assets/profile.png";
+import ProjectCard from "./ProjectCard.astro";
+import fooImg from "../assets/maneaterbug.jpg";
 ---
 
 <section
   class="relative bg-deepest flex flex-col items-start justify-center p-4"
 >
-  <div class="z-10 max-w-3xl mx-auto py-16 space-y-16">
+  <div class="max-w-3xl mx-auto py-16 space-y-16">
     <div class="space-y-8">
       <h1 class="text-6xl text-shadow-neob-xl font-extrabold">
         <span class="text-primary">P</span>rojects
       </h1>
-      <p class="text-xl italic font-medium">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        optio cum repellat impedit, maxime eligendi aliquid soluta autem commodi
-        dolor ex dolorem consequatur libero illo. Cupiditate quasi veniam cumque
-        veritatis!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Distinctio optio cum repellat impedit, maxime eligendi aliquid soluta
-        autem commodi dolor ex dolorem consequatur libero illo. Cupiditate quasi
-        veniam cumque veritatis!Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Distinctio optio cum repellat impedit, maxime eligendi
-        aliquid soluta autem commodi dolor ex dolorem consequatur libero illo.
-        Cupiditate quasi veniam cumque veritatis!
-      </p>
+      <div class="space-y-16">
+        <ProjectCard name="Menoovo" imageSrc={fooImg.src}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et
+          molestiae harum soluta provident temporibus, ex quae facere quasi,
+          pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
+          consequatur.
+        </ProjectCard>
+        <ProjectCard name="Trace-Alyser" imageSrc={fooImg.src} imageRight>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et
+          molestiae harum soluta provident temporibus, ex quae facere quasi,
+          pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
+          consequatur.
+        </ProjectCard>
+        <ProjectCard name="Collect Client" imageSrc={fooImg.src}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et
+          molestiae harum soluta provident temporibus, ex quae facere quasi,
+          pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
+          consequatur.
+        </ProjectCard>
+      </div>
+      <button class="">See more</button>
     </div>
   </div>
 </section>
