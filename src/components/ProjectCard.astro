@@ -11,9 +11,9 @@ const restChars = name.slice(1).toLowerCase();
 
 <div
   class=`
-group grid grid-cols-3 overflow-hidden h-72
+group grid grid-cols-3 overflow-hidden h-72 rounded-4xl
 hover:bg-deep bg-deeper border-4 border-ink hover:border-primary shadow-neob-xl shadow-ink hover:shadow-primary
-rounded-4xl
+hover:scale-105 transition duration-150 ease-in-out
 `
 >
   {
@@ -27,11 +27,14 @@ rounded-4xl
       </div>
     )
   }
-  <div class="col-span-2 p-4">
+  <div class="flex flex-col col-span-2 p-4">
     <h3 class="text-4xl">
       <span class="group-hover:text-primary">{firstChar}</span>{restChars}
     </h3>
-    <p><slot /></p>
+    <p class="grow"><slot /></p>
+    <div class="flex items-center gap-2 w-full">
+      <slot name="icons" />
+    </div>
   </div>
   {
     imageRight && (

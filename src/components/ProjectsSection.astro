@@ -1,4 +1,10 @@
 ---
+import GolangIcon from "../assets/golang-icon.svg";
+import PostgresqlIcon from "../assets/postgresql-icon.svg";
+import PythonIcon from "../assets/python-icon.svg";
+import ReactIcon from "../assets/react-icon.svg";
+import TypescriptIcon from "../assets/typescript-icon.svg";
+
 import ProjectCard from "./ProjectCard.astro";
 import fooImg from "../assets/maneaterbug.jpg";
 ---
@@ -17,18 +23,32 @@ import fooImg from "../assets/maneaterbug.jpg";
           molestiae harum soluta provident temporibus, ex quae facere quasi,
           pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
           consequatur.
+          <Fragment slot="icons">
+            <PostgresqlIcon class="size-6 fill-ink group-hover:fill-primary" />
+            <PythonIcon class="size-6 fill-ink group-hover:fill-primary" />
+            <ReactIcon class="size-6 fill-ink group-hover:fill-primary" />
+            <TypescriptIcon class="size-6 fill-ink group-hover:fill-primary" />
+          </Fragment>
         </ProjectCard>
         <ProjectCard name="Trace-Alyser" imageSrc={fooImg.src} imageRight>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et
           molestiae harum soluta provident temporibus, ex quae facere quasi,
           pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
           consequatur.
+          <Fragment slot="icons">
+            <PythonIcon class="size-6 fill-ink group-hover:fill-primary" />
+            <ReactIcon class="size-6 fill-ink group-hover:fill-primary" />
+            <TypescriptIcon class="size-6 fill-ink group-hover:fill-primary" />
+          </Fragment>
         </ProjectCard>
         <ProjectCard name="Collect Client" imageSrc={fooImg.src}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et
           molestiae harum soluta provident temporibus, ex quae facere quasi,
           pariatur at delectus porro vel eum est voluptates? Nemo, voluptatum
           consequatur.
+          <Fragment slot="icons">
+            <GolangIcon class="size-8 fill-ink group-hover:fill-primary" />
+          </Fragment>
         </ProjectCard>
       </div>
       <button class="">See more</button>
