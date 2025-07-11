@@ -8,10 +8,7 @@ import waveBG from "../assets/wave-bottom.svg";
   class="relative h-screen w-screen bg-deepest flex flex-col items-start justify-center p-4"
 >
   <div class="absolute inset-0">
-    <img
-      src={waveBG.src}
-      class="object-cover lg:opacity-50 object-bottom w-full h-full"
-    />
+    <img src={waveBG.src} class="object-cover object-bottom w-full h-full" />
   </div>
   <div class="z-10 max-w-3xl mx-auto space-y-8">
     <div class="flex flex-col items-start gap-2">
@@ -24,7 +21,9 @@ import waveBG from "../assets/wave-bottom.svg";
         <span id="cursor" class="inline-block w-1.5 h-6 animate-pulse bg-ink"
         ></span>
       </div>
-      <h1 class="text-6xl font-extrabold">Robin Wiersig</h1>
+      <h1 class="text-6xl font-extrabold">
+        <span class="text-primary">R</span>obin Wiersig
+      </h1>
       <p class="text-3xl text-whisper font-medium">
         Fullstack Developer based in Berlin. I love to make things more
         efficient one bug at a time
