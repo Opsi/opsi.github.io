@@ -3,6 +3,7 @@ import "../styles/global.css";
 import "@fontsource-variable/fira-code";
 import "@fontsource/fira-sans";
 import "@fontsource-variable/biorhyme";
+import NavButton from "../components/NavButton.astro";
 ---
 
 <!doctype html>
@@ -17,13 +18,13 @@ import "@fontsource-variable/biorhyme";
   <body class="bg-deepest text-ink">
     <!-- TODO: Improve this styling -->
     <nav
-      class="fixed left-0 right-0 top-0 bg-black z-50
-      flex items-center h-10 p-4 gap-2"
+      class="fixed w-screen top-0 z-50
+      flex items-center p-4 gap-4 justify-end"
     >
       <!-- TODO: Implement this -->
-      <a href="/#about">Home</a>
-      <a href="#">Posts</a>
-      <a href="#">Contact</a>
+      <NavButton href="/#about" label="About" />
+      <NavButton href="#" label="Projects" />
+      <NavButton href="/#contact" label="Contact" />
     </nav>
     <slot />
   </body>
