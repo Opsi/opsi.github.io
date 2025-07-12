@@ -12,7 +12,9 @@ const restChars = name.slice(1).toLowerCase();
 <div
   class=`
 group grid grid-cols-3 overflow-hidden h-72 rounded-4xl
-hover:bg-deep bg-deeper border-4 border-ink hover:border-primary shadow-neob-xl shadow-ink hover:shadow-primary
+hover:bg-deep bg-deep 
+border-2 sm:border-4 border-black
+shadow-neob-md sm:shadow-neob-xl shadow-black 
 hover:scale-105 transition duration-150 ease-in-out
 `
 >
@@ -21,7 +23,7 @@ hover:scale-105 transition duration-150 ease-in-out
       <div class="col-span-1">
         <img
           src={imageSrc}
-          class="object-cover size-full border-r-2 border-ink group-hover:border-primary"
+          class="object-cover size-full border-r-2 sm:border-r-4 border-black"
           alt={`Project image of project ${name}`}
         />
       </div>
@@ -41,7 +43,7 @@ hover:scale-105 transition duration-150 ease-in-out
       <div class="col-span-1">
         <img
           src={imageSrc}
-          class="object-cover size-full border-l-2 border-ink group-hover:border-primary"
+          class="object-cover size-full border-l-2 sm:border-l-4 border-black"
           alt={`Project image of project ${name}`}
         />
       </div>
