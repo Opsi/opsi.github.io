@@ -1,42 +1,72 @@
 ---
 import GithubLogo from "../assets/github-icon.svg";
 import LinkedinLogo from "../assets/linkedin-icon.svg";
-import waveBG from "../assets/hero-waves-wide.svg";
+import waveBG from "../assets/wave-left.svg";
+import profilePic from "../assets/profile.png";
+import PseudoTerminalEntry from "./PseudoTerminalEntry.astro";
 ---
 
 <section
-  class="relative h-screen w-screen bg-deepest flex flex-col items-start justify-center p-2 sm:p-4"
+  class="relative min-h-screen w-screen bg-[#1f1f1f] flex flex-col justify-center p-4 sm:p-4"
 >
   <div class="absolute inset-0">
-    <img src={waveBG.src} class="object-cover object-bottom w-full h-full" />
+    <img src={waveBG.src} class="object-cover object-left w-full h-full" />
   </div>
-  <div class="z-10 max-w-3xl mx-auto space-y-8">
-    <div class="flex flex-col items-start gap-2">
-      <h1 class="text-4xl sm:text-6xl font-extrabold">
-        <span class="text-primary">R</span>obin Wiersig
-      </h1>
-      <p class="text-xl sm:text-3xl text-whisper font-medium">
-        Berlin-based Fullstack Developer.
-      </p>
-    </div>
-    <div class="space-y-2">
-      <div class="flex items-center justify-start gap-4 h-12">
-        <a href="https://github.com/opsi">
-          <GithubLogo
-            class="size-10 bg-whisper hover:bg-primary rounded p-2 hover:scale-105 transition duration-150 ease-in-out"
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/robin-wiersig-396527195">
-          <LinkedinLogo
-            class="size-10 bg-whisper hover:bg-primary rounded p-2 hover:scale-105 transition duration-150 ease-in-out"
-          />
-        </a>
-        <a
-          href="/#about"
-          class="text-deepest flex items-center px-4 py-1 h-10 font-bold font-mono text-2xl rounded bg-whisper hover:bg-primary hover:scale-105 transition duration-150 ease-in-out"
-          >whoami</a
+
+  <div
+    class="z-10 my-8 max-w-md md:max-w-3xl mx-auto w-full space-y-4 sm:space-y-8"
+  >
+    <div class="w-full flex flex-col md:flex-row md:h-md gap-4 sm:gap-8">
+      <img
+        src={profilePic.src}
+        alt="Profile Picture"
+        class="rounded-xl border-2 border-primary-dark w-full md:h-full md:w-76 max-w-md shadow-neob-md sm:shadow-neob-xl shadow-black hover:border-tertiary transition duration-150 ease-in-out"
+      />
+      <div
+        class="border-2 border-primary-dark max-w-md w-full rounded-xl md:h-76 flex flex-col overflow-hidden shadow-neob-md sm:shadow-neob-xl shadow-black group hover:border-tertiary transition duration-150 ease-in-out"
+      >
+        <div
+          class="flex justify-center font-mono text-lg grow flex-col gap-1 bg-deepest p-2"
         >
+          <PseudoTerminalEntry command="whoami">
+            Robin Wiersig
+          </PseudoTerminalEntry>
+          <PseudoTerminalEntry command="whereami">
+            Berlin, Germany
+          </PseudoTerminalEntry>
+          <PseudoTerminalEntry command="whatami">
+            Software Developer
+          </PseudoTerminalEntry>
+          <PseudoTerminalEntry command="whichtools">
+            TypeScript, React, Python, Go and more
+          </PseudoTerminalEntry>
+          <PseudoTerminalEntry />
+        </div>
       </div>
+    </div>
+    <div class="w-full flex flex-col md:flex-row gap-4 sm:gap-8">
+      <a
+        class="flex items-center gap-2 sm:gap-4 group bg-deepest rounded-xl overflow-hidden border-2 border-primary-dark md:w-76 max-w-md shadow-neob-md sm:shadow-neob-xl hover:border-primary cursor-pointer transition duration-150 ease-in-out"
+        href="https://www.linkedin.com/in/robin-wiersig-396527195"
+      >
+        <LinkedinLogo
+          class="size-10 shadow-neob-md bg-primary-dark group-hover:bg-primary p-2 transition duration-150 ease-in-out"
+        />
+        <span class="font-mono text-lg transition duration-150 ease-in-out"
+          ><span class="text-primary">&gt; </span>contact me</span
+        >
+      </a>
+      <a
+        class="flex items-center gap-2 sm:gap-4 group bg-deepest rounded-xl overflow-hidden border-2 border-primary-dark grow shadow-neob-md sm:shadow-neob-xl hover:border-tertiary cursor-pointer transition duration-150 ease-in-out"
+        href="https://github.com/opsi"
+      >
+        <GithubLogo
+          class="size-10 bg-primary-dark group-hover:bg-tertiary p-2 transition duration-150 ease-in-out"
+        />
+        <span class="font-mono text-lg transition duration-150 ease-in-out"
+          ><span class="text-primary">&gt; </span>stuff i made</span
+        >
+      </a>
     </div>
   </div>
 </section>

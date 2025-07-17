@@ -1,0 +1,14 @@
+---
+interface Props {
+  command?: string;
+}
+const { command } = Astro.props;
+---
+
+<div>
+  <div class="text-whisper">
+    <span class="text-primary">&gt;</span>
+    {command ?? <span class="animate-pulse">_</span>}
+  </div>
+  <div><slot /></div>
+</div>
